@@ -28,6 +28,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
