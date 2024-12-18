@@ -1,11 +1,11 @@
 {
-    "key": "group_675b3c2002b81",
-    "title": "Options: Header",
+    "key": "group_67632222ad26e",
+    "title": "Options: Footer",
     "fields": [
         {
-            "key": "field_675b3c2000586",
-            "label": "Logo",
-            "name": "logo",
+            "key": "field_67632222fa138",
+            "label": "Footer Logo",
+            "name": "footer_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -25,6 +25,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 0,
             "preview_size": "medium"
         }
     ],
@@ -46,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734545005
+    "modified": 1734550077
 }

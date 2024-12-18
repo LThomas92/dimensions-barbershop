@@ -46,6 +46,9 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
-    <img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon">
+		<div class="site-header__misc">
+			<a href="#" class="site-header__book-apt-cta">Book Appointment</a>
+			<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+		</div>
 	</div>
 	</header><!-- #masthead -->

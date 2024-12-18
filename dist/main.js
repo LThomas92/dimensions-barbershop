@@ -104,15 +104,15 @@ $(document).ready(function () {
     $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
   });
 
-  $('.c-payment-terms__list-item-title').click(function () {
-    var paymentTitle = $(this).attr('key');
-    $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
-
-    $('.c-payment-terms__wrapper').each(function () {
-      if ($(this).attr('key') == paymentTitle) {
-        $(this).toggleClass('is-open').siblings().removeClass('is-open');
-      }
-    });
+  $('.c-homepage__testimonials__slides').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    slidesToShow: 1,
+    cssEase: 'linear',
+    prevArrow: $('.c-homepage__testimonials__slide__prev-arrow'),
+    nextArrow: $('.c-homepage__testimonials__slide__next-arrow')
   });
 
   if (jQuery(".gutenberg-styles > *").length && !(window.location.hash != "" && jQuery(window.location.hash).length)) {
@@ -171,18 +171,6 @@ $(window).resize(() => {
       }
     });
   }
-
-  //Pages -- Pricing
-  $('.c-payment-terms__list-item-title').click(function () {
-    var paymentTitle = $(this).attr('key');
-    $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
-
-    $('.c-payment-terms__wrapper').each(function () {
-      if ($(this).attr('key') == paymentTitle) {
-        $(this).toggleClass('is-open').siblings().removeClass('is-open');
-      }
-    });
-  });
 });
 
 /***/ })

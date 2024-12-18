@@ -5,7 +5,7 @@
   <?php $bgImage = get_field('background_image'); ?>
     <div style="background-image: url(<?php echo $bgImage['url']; ?>);" class="c-homepage__header"></div>
 
-  <section class="c-homepage__book-apt">
+  <section class="c-homepage__book-apt gutenberg-styles">
     <?php 
       $bookAptContent = get_field('book_apt_content');
       $bookAptTitle = get_field('book_apt_title');
@@ -31,7 +31,7 @@
       $servicesTitle = get_field('services_title');
     ?>
     <div class="c-homepage__services-container">
-      <h2 class="c-homepage__services-title"><?php echo $servicesTitle; ?></h2>
+      <h2 class="c-homepage__services__title"><?php echo $servicesTitle; ?></h2>
 
       <?php if( have_rows('services_list') ): ?>
 
@@ -43,9 +43,9 @@
         $serviceDesc = get_sub_field('service_description');
         ?>
         <li class="c-homepage__services-list-item">
-          <img src="<?php echo $serviceIcon['url']; ?>" alt="<?php echo $serviceIcon['alt']; ?>"/>
-          <h4 class="c-homepage__service-name"><?php echo $servicesTitle; ?></h4>
-          <div class="c-homepage__service-desc">
+          <img class="c-homepage__services-list-item__icon" src="<?php echo $serviceIcon['url']; ?>" alt="<?php echo $serviceIcon['alt']; ?>"/>
+          <h4 class="c-homepage__services-list-item__name"><?php echo $serviceTitle; ?></h4>
+          <div class="c-homepage__services-list-item__desc">
             <?php echo $serviceDesc; ?>
           </div>
         </li>
@@ -57,6 +57,37 @@
 endif; ?>
       </ul>
 
+    </div>
+  </section>
+
+  <section class="c-homepage__testimonials">
+    <?php $testimonialsTitle = get_field('testimonials_title'); ?>
+    <div class="c-homepage__testimonials-container">
+        <h2 class="c-homepage__testimonials__title"><?php echo $testimonialsTitle; ?></h2>
+        <div class="c-homepage__testimonials__slide__prev-arrow"></div>
+        <div class="c-homepage__testimonials__slide__next-arrow"></div>
+        <?php if( have_rows('testimonial_slides') ): ?>
+
+    <ul class="c-homepage__testimonials__slides">
+    <?php while( have_rows('testimonial_slides') ) : the_row();
+
+        $testimonialName = get_sub_field('testimonial_name');
+        $testimonialContent = get_sub_field('testimonial_content'); 
+        ?>
+        <li class="c-homepage__testimonials__slide">
+            <div class="c-homepage__testimonials__slide-content">
+                <?php echo $testimonialContent; ?>
+            </div>
+            <h4 class="c-homepage__testimonials__slide-title">–<?php echo $testimonialName; ?></h4>
+        </li>
+
+    <?php endwhile; ?>
+    </ul>
+
+<?php 
+else :
+    // Do something...
+endif; ?>
     </div>
   </section>
 

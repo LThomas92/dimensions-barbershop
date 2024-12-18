@@ -25,8 +25,18 @@
         }
       }
     }
+    &__misc {
+      display: flex;
+    }
     .search-btn {
       height: 3rem;
       cursor: pointer;
+      margin-left: 4rem;
+    }
+    &__book-apt-cta {
+      display: inline-block;
+      background-color: $red;
+      color: $white;
+      padding: 0.8rem 1.5rem;
     }
 }

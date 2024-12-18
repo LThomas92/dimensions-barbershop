@@ -1,0 +1,15 @@
+.site-footer {
+    background-color: $white;
+    padding: 2.5rem 0;
+    &__logo {
+        text-align: center;
+        img {
+            height: 12rem;
+            display: block;
+        }
+    }
+}
+
+.site-info {
+    @include container-margins;
+}

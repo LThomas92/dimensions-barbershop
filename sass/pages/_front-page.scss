@@ -63,9 +63,109 @@
 
   &__services {
     background-color: $blue;
+    &__title {
+      color: $white;
+      margin-bottom: 5rem;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+    }
   }
   &__services-container {
     @include container-margins;
-    padding: 3.5rem 0;
+    padding: 5rem 0;
   }
+  &__services-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__services-list-item {
+    flex-basis: calc((100% / 3) - 5rem);
+    &__icon {
+      height: 5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__name {
+      color: $white;
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    &__desc {
+      color: $offWhite;
+      font-weight: 400;
+    }
+  }
+
+  &__testimonials {
+    background-color: $offWhite;
+    &__title {
+      color: $blue;
+      text-align: center;
+      font-weight: 500;
+    }
+    &__slide-title {
+      text-align: right
+    }
+  }
+  &__testimonials-container {
+    @include container-margins;
+    padding: 5rem 0;
+  }
+  &__testimonials__slides {
+    margin-top: 2.5rem;
+  }
+  &__testimonials__slide {
+    position: relative;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    &::before {
+      content: '';
+      background-image: url('../img/icons/quote.svg');
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -40px;
+    }
+    &::after {
+      content: '';
+      background-image: url('../img/icons/quote.svg');
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: -40px;
+      transform: scaleX(-1)
+    }
+  
+  }
+}
+
+.c-homepage__testimonials__slide__prev-arrow {
+  background-image: url('..//img/icons/arrow.svg');
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+.c-homepage__testimonials__slide__next-arrow {
+  background-image: url('..//img/icons/arrow.svg');
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
