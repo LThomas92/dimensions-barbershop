@@ -4,11 +4,13 @@
 
 @import "header";
 
+//Pages
+@import "pages/front-page";
+
 body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: $offWhite;
 }
 
 * {

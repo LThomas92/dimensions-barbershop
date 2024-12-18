@@ -1,0 +1,71 @@
+.c-homepage {
+  &__header {
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    width: 100%;
+    padding-top: 56.25%; /* For 16:9 aspect ratio (9/16 * 100) */
+    position: relative;
+  }
+  
+  &__book-apt {
+    @include container-margins;
+    &__main-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 5rem 0;
+    }
+    &__title {
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      color: $blue;
+    }
+    &__content {
+      flex-basis: calc((100% / 2) - 3rem);
+    }
+    &__cta {
+      display: inline-block;
+      margin-top: 2.5rem;
+      background-color: $red;
+      color: $white;
+      padding: 0.8rem 1.5rem;
+    }
+    &__image {
+      flex-basis: calc((100% / 2) - 3rem);
+      position: relative;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      &::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 80%;
+      @media only screen and (max-width: $tablet_max) {
+          padding-bottom: 100%;
+      }
+      }
+      img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+          transition: .3s cubic-bezier(.64,.04,.35,1);
+          &:hover {
+              transform: scale(1.05);
+            }
+      }
+    }
+  }
+
+  &__services {
+    background-color: $blue;
+  }
+  &__services-container {
+    @include container-margins;
+    padding: 3.5rem 0;
+  }
+}

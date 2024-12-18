@@ -46,4 +46,6 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+    <img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon">
+	</div>
 	</header><!-- #masthead -->
