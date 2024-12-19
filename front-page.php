@@ -2,8 +2,25 @@
 
 <div class="content">
   <div class="c-homepage">
-  <?php $bgImage = get_field('background_image'); ?>
-    <div style="background-image: url(<?php echo $bgImage['url']; ?>);" class="c-homepage__header"></div>
+  
+  <section class="c-homepage__header">
+  <?php if( have_rows('homepage_slides') ): ?>
+    <ul class="c-homepage__slides">
+    <?php while( have_rows('homepage_slides') ) : the_row();
+        $slideImage = get_sub_field('homepage_slide');
+        if ($slideImage) :
+            ?>
+            <li style="background-image:url(<?php echo esc_url($slideImage['url']); ?>);" class="c-homepage__slide">
+            <div class="slide-image-overlay "></div> <!-- Dark overlay -->  
+          </li>
+        <?php endif; ?>
+    <?php endwhile; ?>
+    </ul>
+  <?php else : ?>
+    <!-- Optional: Fallback content if no slides are available -->
+  <?php endif; ?>
+</section>
+
 
   <section class="c-homepage__book-apt gutenberg-styles">
     <?php 

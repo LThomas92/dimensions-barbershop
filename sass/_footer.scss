@@ -25,7 +25,14 @@
     }
     &__copyright {
       background-color: $black;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
+      text-align: center;
+      p {
+        color: $white;
+      }
+    }
+    &__copyright-margins {
+      @include container-margins;
     }
 }
 
