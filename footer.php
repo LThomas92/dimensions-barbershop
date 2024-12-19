@@ -30,7 +30,11 @@
 		</nav><!-- #site-navigation -->
 		
 			</div>
+      <?php $copyrightInfo = get_field('copyright_info', 'option'); ?>
 		</div><!-- .site-info -->
+    <div class="site-footer__copyright">
+        <p><?php echo $copyrightInfo; ?></p>
+      </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
