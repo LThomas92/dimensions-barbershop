@@ -27,16 +27,14 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dimensions-barbershop' ); ?></a>
 
-	<div class="site-header__container"></div>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 		<?php $logo = get_field('logo', 'option'); ?>
+
 		<a class="site-header__logo" href="<?php echo site_url(); ?>">
 			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
-		</a>
+		</a> <!-- LOGO --> 
 		
-		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<?php
 			wp_nav_menu(
@@ -47,10 +45,12 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
 		<div class="site-header__misc">
 			<a href="#" class="site-header__book-apt-cta">Book Appointment</a>
 			<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
-		</div>
+		</div> <!-- MISC -->
+
 	</div>
+
 	</header><!-- #masthead -->
-	</div>

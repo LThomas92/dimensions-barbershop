@@ -13,10 +13,17 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-		<?php $logo = get_field('footer_logo', 'option'); ?>
+		<?php $logo = get_field('footer_logo', 'option'); 
+			  $desc = get_field('footer_desc', 'option');
+		?>
+
+		<div class="site-footer__container">
+		<div class="site-footer__logo-desc">
 		<a class="site-footer__logo" href="<?php echo site_url(); ?>">
 			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
 		</a>
+		<p class="site-footer__desc"><?php echo $desc; ?></p>
+		</div>
 			<div class="site-footer__main-content">
 			<nav id="site-navigation" class="main-navigation">
 			<?php
@@ -36,6 +43,8 @@
 	<div class="site-footer__copyright">
 		<div class="site-footer__copyright-margins">
         <p><?php echo $copyrightInfo; ?></p>
+		</div>
+		
 		</div>
       </div>
 </div><!-- #page -->

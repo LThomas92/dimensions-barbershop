@@ -1,18 +1,9 @@
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed; /* Fixed navigation bar */
-  top: 0; /* Stick it to the top */
-  left: 0;
-  z-index: 10;
-  margin-bottom: 1.2rem;
-  padding-top: 1.2rem;
-
+  @include container-margins;
     &__logo {
         img {
             display: block;
-            height: 15rem;   
+            height: 12rem;   
         }
     }
     ul {
@@ -20,7 +11,7 @@
       li {
         margin-right: 1rem;
         a {
-          color: $white;
+          color: $blue;
           text-transform: uppercase;
           letter-spacing: 1px;
           transition: all 300ms ease-in;
@@ -47,5 +38,7 @@
 }
 
 .site-branding { 
-  @include container-margins;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
