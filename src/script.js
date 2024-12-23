@@ -23,6 +23,16 @@ $('.mobile-menu-overlay__close-icon').click(function() {
   $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
 });
 
+$('.c-homepage_slides').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  slidesToShow: 1,
+  cssEase: 'linear',
+});
+
+
 
 $('.c-homepage__testimonials__slides').slick({
   dots: false,

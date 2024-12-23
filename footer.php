@@ -24,6 +24,29 @@
 		</a>
 		<p class="site-footer__desc"><?php echo $desc; ?></p>
 		</div>
+    <div class="site-footer__social-media">
+    <?php if( have_rows('social_media_icons', 'option') ): ?>
+
+    <ul class="site-footer__social-media-icons">
+    <?php while( have_rows('social_media_icons', 'option') ) : the_row();
+        $socialMediaIcon = get_sub_field('social_media_icon');
+        $socialMediaLink = get_sub_field('social_media_link'); ?>
+
+        <li class="site-footer__social-media-icon">
+          <a href="<?php echo $socialMediaLink; ?>" class="site-footer__social-media-link">
+            <img src="<?php echo $socialMediaIcon['url']; ?>" alt="<?php echo $socialMediaIcon['alt']; ?>">
+          </a>
+        </li>
+        
+
+    <?php endwhile; ?>
+    </ul>
+
+<?php
+else :
+    // Do something...
+endif; ?>
+    </div>
 			<div class="site-footer__main-content">
 			<nav id="site-navigation" class="main-navigation">
 			<?php

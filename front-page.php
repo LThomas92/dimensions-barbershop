@@ -8,11 +8,18 @@
     <ul class="c-homepage__slides">
     <?php while( have_rows('homepage_slides') ) : the_row();
         $slideImage = get_sub_field('homepage_slide');
-        if ($slideImage) :
-            ?>
-            <li style="background-image:url(<?php echo esc_url($slideImage['url']); ?>);" class="c-homepage__slide">
-            <div class="slide-image-overlay "></div> <!-- Dark overlay -->  
-          </li>
+        $smallTitle = get_sub_field('homepage_small_title');
+        $title = get_sub_field('homepage_title');
+        $desc = get_sub_field('homepage_desc');
+        if ($slideImage) : ?>
+            <li class="c-homepage__slide">
+              <img src="<?php echo $slideImage['url']; ?>" alt="<?php echo $slideImage['alt']; ?>"/>
+              <div class="c-homepage__content">
+                <h4 class="c-homepage__header-small-title"><?php echo $smallTitle; ?></h4>
+                <h1 class="c-homepage__header-title"><?php echo $title; ?></h1>
+              <p class="c-homepage__header-desc"><?php echo $desc; ?></p>
+              </div>
+            </li>
         <?php endif; ?>
     <?php endwhile; ?>
     </ul>
@@ -42,41 +49,7 @@
 
   </div>
   </section>
-
-  <section class="c-homepage__services">
-    <?php 
-      $servicesTitle = get_field('services_title');
-    ?>
-    <div class="c-homepage__services-container">
-      <h2 class="c-homepage__services__title"><?php echo $servicesTitle; ?></h2>
-
-      <?php if( have_rows('services_list') ): ?>
-
-      <ul class="c-homepage__services-list">
-    <?php while( have_rows('services_list') ) : the_row();
-
-        $serviceIcon = get_sub_field('service_icon'); 
-        $serviceTitle = get_sub_field('service_title');
-        $serviceDesc = get_sub_field('service_description');
-        ?>
-        <li class="c-homepage__services-list-item">
-          <img class="c-homepage__services-list-item__icon" src="<?php echo $serviceIcon['url']; ?>" alt="<?php echo $serviceIcon['alt']; ?>"/>
-          <h4 class="c-homepage__services-list-item__name"><?php echo $serviceTitle; ?></h4>
-          <div class="c-homepage__services-list-item__desc">
-            <?php echo $serviceDesc; ?>
-          </div>
-        </li>
-
-    <?php endwhile; ?>
-
-<?php else :
-    // Do something...
-endif; ?>
-      </ul>
-
-    </div>
-  </section>
-
+  
   <section class="c-homepage__testimonials">
     <?php $testimonialsTitle = get_field('testimonials_title'); ?>
     <div class="c-homepage__testimonials-container">

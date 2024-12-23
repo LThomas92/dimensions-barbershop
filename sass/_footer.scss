@@ -1,13 +1,14 @@
 .site-footer {
-    background-color: #D1C6B1;
+    background-color: $blue;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     &__container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     &__logo-desc {
-
+      flex-basis: calc((100% / 3) - 4rem);
     }
     &__logo {
         img {
@@ -18,7 +19,17 @@
     &__desc {
       color: $white;
     }
+    &__social-media {
+      flex-basis: calc((100% / 3) - 2rem);
+    }
+    &__social-media-icons {
+      display: flex;
+      img {
+        height: 3rem;
+      }
+    }
     .main-navigation {
+      flex-basis: calc((100% / 3) - 2rem);
       ul li {
         a {
           color: $white;
