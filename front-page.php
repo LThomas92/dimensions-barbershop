@@ -49,8 +49,8 @@
 
   </div>
   </section>
-  
-  <section class="c-homepage__testimonials">
+
+  <section class="c-homepage__testimonials gutenberg-styles">
     <?php $testimonialsTitle = get_field('testimonials_title'); ?>
     <div class="c-homepage__testimonials-container">
         <h2 class="c-homepage__testimonials__title"><?php echo $testimonialsTitle; ?></h2>
