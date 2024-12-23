@@ -1,9 +1,19 @@
 .site-header {
   @include container-margins;
+  &__container {
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: $box-shadow-bottom-only-black;
+    z-index: 1000;
+    padding: 1.5rem 0;
+  }
     &__logo {
         img {
             display: block;
-            height: 12rem;   
+            height: 7rem;   
         }
     }
     ul {
@@ -34,6 +44,9 @@
       background-color: $red;
       color: $white;
       padding: 0.8rem 1.5rem;
+    }
+    &__box-shadow {
+      box-shadow: $box-shadow-bottom-only-black;
     }
 }
 

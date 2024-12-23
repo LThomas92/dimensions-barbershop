@@ -24,6 +24,21 @@
 		</a>
 		<p class="site-footer__desc"><?php echo $desc; ?></p>
 		</div>
+
+    <div class="site-footer__main-content">
+			<nav id="site-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'footer-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+		
+			</div>
+
     <div class="site-footer__social-media">
     <?php if( have_rows('social_media_icons', 'option') ): ?>
 
@@ -47,19 +62,7 @@ else :
     // Do something...
 endif; ?>
     </div>
-			<div class="site-footer__main-content">
-			<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'footer-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-		
-			</div>
+
       <?php $copyrightInfo = get_field('copyright_info', 'option'); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

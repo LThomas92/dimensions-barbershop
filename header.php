@@ -27,6 +27,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dimensions-barbershop' ); ?></a>
 
+  <div class="site-header__container">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 		<?php $logo = get_field('logo', 'option'); ?>
@@ -54,3 +55,4 @@
 	</div>
 
 	</header><!-- #masthead -->
+    </div>

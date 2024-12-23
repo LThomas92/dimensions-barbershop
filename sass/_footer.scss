@@ -19,9 +19,7 @@
     &__desc {
       color: $white;
     }
-    &__social-media {
-      flex-basis: calc((100% / 3) - 2rem);
-    }
+
     &__social-media-icons {
       display: flex;
       img {

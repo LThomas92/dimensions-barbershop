@@ -15,9 +15,18 @@
   @media (max-width: 767px) {
     .site-header {
       width: calc(100vw - calc(16px * 2)); } }
+  .site-header__container {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    padding: 1.5rem 0; }
   .site-header__logo img {
     display: block;
-    height: 12rem; }
+    height: 7rem; }
   .site-header ul {
     display: flex; }
     .site-header ul li {
@@ -40,6 +49,8 @@
     background-color: #9B1C31;
     color: #fff;
     padding: 0.8rem 1.5rem; }
+  .site-header__box-shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.75); }
 
 .site-branding {
   display: flex;
@@ -61,8 +72,6 @@
     display: block; }
   .site-footer__desc {
     color: #fff; }
-  .site-footer__social-media {
-    flex-basis: calc((100% / 3) - 2rem); }
   .site-footer__social-media-icons {
     display: flex; }
     .site-footer__social-media-icons img {
