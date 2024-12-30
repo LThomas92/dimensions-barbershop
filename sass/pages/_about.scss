@@ -1,0 +1,42 @@
+.c-about-page {
+  @include container-margins;
+}
+
+.c-team-members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+}
+
+.c-team-member {
+  flex-basis: calc((100% / 3) - 2rem);
+  &__image {
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 80%;
+    @media only screen and (max-width: $tablet_max) {
+        padding-bottom: 100%;
+    }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        transition: .3s cubic-bezier(.64,.04,.35,1);
+        &:hover {
+            transform: scale(1.05);
+          }
+    }
+  }
+}
