@@ -1,5 +1,29 @@
 .c-about-page {
   @include container-margins;
+  &__header {
+
+  }
+  &__small-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+    color: $red;
+    letter-spacing: 1.2px;
+  }
+  &__title {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: $blue;
+  }
+  &__header-desc {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 24px;
+  }
 }
 
 .c-team-members {
@@ -11,6 +35,7 @@
 
 .c-team-member {
   flex-basis: calc((100% / 3) - 2rem);
+  margin-bottom: 3.5rem;
   &__image {
     position: relative;
     margin-bottom: 1rem;

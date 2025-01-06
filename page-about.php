@@ -3,6 +3,19 @@
 <div class="content">
 
 <section class="c-about-page">
+    <?php
+        $smallTitle = get_field('small_title'); 
+        $headerTitle = get_field('header_title');
+        $headerDesc = get_field('header_description');
+    ?>
+
+    <div class="c-about-page__header">
+        <h5 class="c-about-page__small-title"><?php echo $smallTitle; ?></h5>
+        <h2 class="c-about-page__title"><?php echo $headerTitle; ?></h2>
+        <p class="c-about-page__header-desc">
+            <?php echo $headerDesc; ?>
+        </p>
+    </div>
 
 <?php if( have_rows('team_members') ): ?>
 

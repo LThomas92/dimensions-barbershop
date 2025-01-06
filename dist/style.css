@@ -257,6 +257,24 @@
   @media (max-width: 767px) {
     .c-about-page {
       width: calc(100vw - calc(16px * 2)); } }
+  .c-about-page__small-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+    color: #9B1C31;
+    letter-spacing: 1.2px; }
+  .c-about-page__title {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #112B5B; }
+  .c-about-page__header-desc {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 24px; }
 
 .c-team-members {
   display: flex;
@@ -265,7 +283,8 @@
   margin: 5rem 0; }
 
 .c-team-member {
-  flex-basis: calc((100% / 3) - 2rem); }
+  flex-basis: calc((100% / 3) - 2rem);
+  margin-bottom: 3.5rem; }
   .c-team-member__image {
     position: relative;
     margin-bottom: 1rem;
