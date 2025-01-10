@@ -6,6 +6,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media only screen and (max-width: $mobile_max) {
+        flex-direction: column;
+      }
     }
     &__logo-desc {
       flex-basis: calc((100% / 3) - 4rem);
@@ -14,6 +17,9 @@
         img {
             height: 12rem;
             display: block;
+            @media only screen and (max-width: $mobile_max) {
+              margin: 0 auto;
+            }
         }
     }
     &__desc {
@@ -38,6 +44,12 @@
         display: inline-block;
         margin-right: 1rem;
         vertical-align: middle;
+      }
+    }
+
+    &__social-media {
+      @media only screen and (max-width: $mobile_max) {
+        width: 100%;
       }
     }
 
@@ -71,6 +83,13 @@
     }
     &__copyright-margins {
       @include container-margins;
+    }
+    &__main-content {
+      @media only screen and (max-width: $mobile_max) {
+        margin-top: 3.5rem;
+        margin-bottom: 3rem;
+        width: 100%;
+      }
     }
 }
 

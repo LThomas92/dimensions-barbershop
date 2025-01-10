@@ -14,6 +14,9 @@
       display: flex;
       justify-content: space-between;
       margin: 5rem 0;
+      @media only screen and (max-width: $tablet_max) {
+          flex-direction: column;
+      }
     }
     &__title {
       margin-bottom: 1.5rem;
@@ -22,6 +25,9 @@
     }
     &__content {
       flex-basis: calc((100% / 2) - 3rem);
+      @media only screen and (max-width: $tablet_max) {
+        margin-bottom: 3.5rem;
+      }
     }
     &__cta {
       display: inline-block;
@@ -66,7 +72,8 @@
     &__title {
       color: $blue;
       text-align: center;
-      font-weight: 500;
+      font-weight: 300;
+      margin-bottom: 3.5rem;
     }
     &__slide-title {
       text-align: right

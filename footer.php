@@ -20,7 +20,7 @@
 
 		<div class="site-footer__container">
 		<div class="site-footer__logo-desc">
-		<a class="site-footer__logo" href="<?php echo site_url(); ?>">
+		<a tareget="_blank" class="site-footer__logo" href="<?php echo site_url(); ?>">
 			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
 		</a>
 		<p class="site-footer__desc"><?php echo $desc; ?></p>

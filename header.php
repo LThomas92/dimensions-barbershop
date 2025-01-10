@@ -48,7 +48,6 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="site-header__misc">
-			<a href="#" class="site-header__book-apt-cta">Book Appointment</a>
 			<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
 		</div> <!-- MISC -->
 
@@ -56,3 +55,57 @@
 
 	</header><!-- #masthead -->
     </div>
+
+	<div class="mobile-header">
+
+    <div id="nav-icon3" class="mobile-header__menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+	<a href="<?php echo site_url(); ?>">
+    <img title="Dimensions Barbershop Logo" class="mobile-header__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Dimensions Barbershop Logo"/>
+    </a>
+
+	<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+    
+  </div>
+
+  <div class="mobile-menu-overlay">
+	<div class="mobile-menu-overlay__container">
+	<div class="mobile-menu-overlay__header">
+	<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-white.svg" alt="Close Icon"/>
+
+	<a href="<?php echo site_url(); ?>">
+    <img title="Dimensions Barbershop Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Dimensions Barbershop Logo"/>
+    </a>
+
+	<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+	</div>
+  <nav class="mobile-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+		</div>
+  </div>
+
+  <div class="overlay-menu">
+<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close.svg" alt="Close Icon"/>
+  <div class="container-margins">
+<div class="header-search-form">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  <label>
+      <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'What are you looking for?', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+  </label>
+  <button type="submit" name="submit" value="submit"></button>
+</form>
+    </div> <!-- header search form -->
+    </div> <!-- container margins -->
+</div> <!-- overlay menu -->

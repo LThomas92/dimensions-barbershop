@@ -14,11 +14,20 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 5rem;
+        @media only screen and (max-width: $tablet_max) {
+            margin-bottom: 2.5rem;
+        }
     }
     &__list-item {
-        flex-basis: calc((100% / 4 ) - 2rem);
+        flex-basis: calc((100% / 4) - 2rem);
         margin-bottom: 2.5rem;
         cursor: pointer;
+        @media only screen and (max-width: $tablet_max) {
+            flex-basis: calc((100% / 2) - 2rem);
+        }
+        @media only screen and (max-width: $mobile_max) {
+            flex-basis: calc((100% / 1) - 2rem);
+        }
         figure {
             position: relative;
             margin-bottom: 1rem;
@@ -61,6 +70,9 @@
         &__content {
             display: flex;
             justify-content: space-between;
+            @media only screen and (max-width: $tablet_max) {
+                flex-direction: column;
+            }
         }
         &__left {
             flex-basis: calc((100% / 2 ) - 4rem);

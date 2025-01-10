@@ -36,6 +36,12 @@
 .c-team-member {
   flex-basis: calc((100% / 3) - 2rem);
   margin-bottom: 3.5rem;
+  @media only screen and (max-width: $tablet_max) {
+    flex-basis: calc((100% / 2) - 1rem);
+}
+@media only screen and (max-width: $mobile_max) {
+  flex-basis: 100%;
+}
   &__image {
     position: relative;
     margin-bottom: 1rem;
