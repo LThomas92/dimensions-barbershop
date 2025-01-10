@@ -8,6 +8,19 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 $( document ).ready(function() {
 
+  $('.c-page-services__dropdown-list-item-title').click(function() {
+    var dropDownTitle = $(this).attr('key');
+    $(this).toggleClass('c-page-services__dropdown-list-item-active-title').siblings().removeClass('c-page-services__dropdown-list-item-active-title');
+
+    $('.c-page-services__wrapper').each(function() {
+      if($(this).attr('key') == dropDownTitle) {
+        $(this).toggleClass('is-open').siblings().removeClass('is-open');
+      }
+    });
+
+
+  });
+
   $('.menu-item-has-children').click(function(){
     $('.sub-menu').toggleClass('sub-menu__active');
     $(this).toggleClass('expanded');

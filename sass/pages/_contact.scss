@@ -1,0 +1,82 @@
+.c-page-contact {
+    @include container-margins;
+    margin-bottom: 4rem;
+    &__title {
+        text-align: center;
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
+        font-weight: 500;
+    }
+    &__form {
+        box-shadow: $box-shadow-light-black;
+        width: 100%;
+        @media only screen and (max-width: $tablet_max) {
+            width: 100%;
+        }
+        form {
+            background-color: $blue;
+            padding: 3rem 4.5rem;
+            @media only screen and (max-width: $tablet_max) {
+                padding: 1.5rem 2rem;
+            }
+        }
+        .gfield_label, label, .gform-field-label {
+            font-family: $OpenSans;
+            font-size: 0.9rem;
+            font-weight: 400 !important;
+            color: $white;
+        }
+
+        input[type="email"], input[type="tel"] {
+            font-family: $OpenSans;
+        }
+
+        input[type="text"] {
+            font-family: $robtoSlab !important;
+            background-color: transparent;
+            border: none;
+            outline: none !important;
+            border-bottom: 0.8px solid $white;
+            color: $white;
+            display: block;
+            margin-bottom: 1.5rem !important;
+            padding: 0;
+            &::focus {
+                outline: none !important;
+            }
+        }
+        textarea {
+            font-family: $OpenSans;
+        }
+
+
+        .gform_button {
+            font-family: $OpenSans !important;
+            background-color: $white !important;
+            color: $blue !important;
+            font-weight: 500 !important;
+        }
+        .gform_footer {
+            margin-top: 3.5rem !important;
+        }
+        .gform_confirmation_message {
+            text-align: center;
+            font-family: $OpenSans;
+            color: $blue;
+            padding: 8rem 2.5rem;
+            margin-top: 2rem;
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url('../img/icons/check-icon.svg');
+                background-size: 30px 30px;
+                width: 30px;
+                height: 30px;
+                display: block;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+            }
+        }
+    }
+}

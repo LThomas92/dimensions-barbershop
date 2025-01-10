@@ -15,6 +15,7 @@
 		<div class="site-info">
 		<?php $logo = get_field('footer_logo', 'option'); 
 			  $desc = get_field('footer_desc', 'option');
+			  $address = get_field('address', 'option');
 		?>
 
 		<div class="site-footer__container">
@@ -23,6 +24,7 @@
 			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
 		</a>
 		<p class="site-footer__desc"><?php echo $desc; ?></p>
+		<p class="site-footer__address"><?php echo $address; ?></p>
 		</div>
 
     <div class="site-footer__main-content">
