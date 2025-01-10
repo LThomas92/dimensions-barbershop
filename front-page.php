@@ -29,7 +29,7 @@
 </section>
 
 
-  <section class="c-homepage__book-apt gutenberg-styles">
+  <section class="c-homepage__book-apt">
     <?php 
       $bookAptContent = get_field('book_apt_content');
       $bookAptTitle = get_field('book_apt_title');
@@ -50,7 +50,7 @@
   </div>
   </section>
 
-  <section class="c-homepage__testimonials gutenberg-styles">
+  <section class="c-homepage__testimonials">
     <?php $testimonialsTitle = get_field('testimonials_title'); ?>
     <div class="c-homepage__testimonials-container">
         <h2 class="c-homepage__testimonials__title"><?php echo $testimonialsTitle; ?></h2>
