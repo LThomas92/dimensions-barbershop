@@ -1,15 +1,5 @@
 .site-header {
   @include container-margins;
-  &__container {
-    background-color: $white;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: $box-shadow-bottom-only-black;
-    z-index: 1000;
-    padding: 1.5rem 0;
-  }
     &__logo {
         img {
             display: block;
@@ -140,11 +130,12 @@
     justify-content: space-between;
     align-items: center;
     @include container-margins;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
   }
   &__logo {
-    height: 2.5rem;
+    height: 5rem;
     display: block;
+    margin-left: 4.5rem;
   }
   .search-btn {
     height: 3rem;

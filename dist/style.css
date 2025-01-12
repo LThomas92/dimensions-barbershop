@@ -15,15 +15,6 @@
   @media (max-width: 767px) {
     .site-header {
       width: calc(100vw - calc(16px * 2)); } }
-  .site-header__container {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.75);
-    z-index: 1000;
-    padding: 1.5rem 0; }
   .site-header__logo img {
     display: block;
     height: 7rem; }
@@ -134,7 +125,7 @@
       max-width: 959px;
       margin-left: auto !important;
       margin-right: auto !important;
-      margin-top: 1.5rem; } }
+      margin: 1.5rem 0; } }
   @media only screen and (max-width: 1024px) and (min-width: 1440px) {
     .mobile-header {
       max-width: 1200px; } }
@@ -142,8 +133,9 @@
     .mobile-header {
       width: calc(100vw - calc(16px * 2)); } }
   .mobile-header__logo {
-    height: 2.5rem;
-    display: block; }
+    height: 5rem;
+    display: block;
+    margin-left: 4.5rem; }
   .mobile-header .search-btn {
     height: 3rem;
     cursor: pointer;

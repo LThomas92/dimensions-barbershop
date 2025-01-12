@@ -77,9 +77,6 @@
 	<div class="mobile-menu-overlay__header">
 	<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-white.svg" alt="Close Icon"/>
 
-	<a href="<?php echo site_url(); ?>">
-    <img title="Dimensions Barbershop Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Dimensions Barbershop Logo"/>
-    </a>
 
 	<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
 	</div>
