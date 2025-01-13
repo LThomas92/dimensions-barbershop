@@ -70,4 +70,19 @@
           }
     }
   }
+  &__phone {
+    display: block;
+    margin-top: 0.5rem;
+    color: $blue;
+    &::before {
+      content: '';
+      background-image: url('../img/icons/phone.svg');
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
 }
