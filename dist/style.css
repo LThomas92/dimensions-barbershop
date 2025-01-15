@@ -504,13 +504,14 @@
 
 .c-team-member {
   flex-basis: calc((100% / 3) - 2rem);
-  margin-bottom: 3.5rem; }
+  margin-bottom: 7.5rem; }
   @media only screen and (max-width: 1024px) {
     .c-team-member {
       flex-basis: calc((100% / 2) - 1rem); } }
   @media only screen and (max-width: 767px) {
     .c-team-member {
-      flex-basis: 100%; } }
+      flex-basis: 100%;
+      margin-bottom: 5rem; } }
   .c-team-member__image {
     position: relative;
     margin-bottom: 1rem;
@@ -757,6 +758,12 @@
     position: relative;
     margin-bottom: 0.5rem;
     overflow: hidden; }
+    @media only screen and (max-width: 1024px) {
+      .c-page-lookbook__image {
+        flex-basis: calc((100% / 3) - 0.5rem); } }
+    @media only screen and (max-width: 767px) {
+      .c-page-lookbook__image {
+        flex-basis: calc((100% / 2) - 0.5rem); } }
     .c-page-lookbook__image::before {
       content: "";
       position: relative;
@@ -808,12 +815,12 @@
         .c-page-contact__form form {
           padding: 1.5rem 2rem; } }
     .c-page-contact__form .gfield_label, .c-page-contact__form label, .c-page-contact__form .gform-field-label {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", sans-serif !important;
       font-size: 0.9rem;
       font-weight: 400 !important;
-      color: #fff; }
+      color: #fff !important; }
     .c-page-contact__form input[type="email"], .c-page-contact__form input[type="tel"] {
-      font-family: "Open Sans", sans-serif; }
+      font-family: "Open Sans", sans-serif !important; }
     .c-page-contact__form input[type="text"] {
       font-family: "Roboto Slab", sans-serif !important;
       background-color: transparent;
@@ -827,7 +834,7 @@
       .c-page-contact__form input[type="text"]::focus {
         outline: none !important; }
     .c-page-contact__form textarea {
-      font-family: "Open Sans", sans-serif; }
+      font-family: "Open Sans", sans-serif !important; }
     .c-page-contact__form .gform_button {
       font-family: "Open Sans", sans-serif !important;
       background-color: #fff !important;
@@ -1043,8 +1050,9 @@
     width: 100% !important; }
 
 #applyform {
-  margin-top: 150px;
-  /* To place it further down the page */ }
+  margin-top: 200px;
+  padding-top: 20px;
+  /* Adds some padding to the top of the section */ }
 
 .c-page-privacy-policy {
   width: calc(100vw - calc(16px * 2));
@@ -1108,6 +1116,8 @@ html {
 
 html,
 body {
+  overflow: auto;
+  /* Ensure no restriction on body overflow */
   height: 100%; }
 
 figure {

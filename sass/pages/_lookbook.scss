@@ -21,6 +21,12 @@
         position: relative;
         margin-bottom: 0.5rem;
         overflow: hidden;
+        @media only screen and (max-width: $tablet_max) {
+            flex-basis: calc((100% / 3) - 0.5rem);
+        }
+        @media only screen and (max-width: $mobile_max) {
+            flex-basis: calc((100% / 2) - 0.5rem);
+        }
         &::before {
             content: "";
             position: relative;

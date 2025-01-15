@@ -21,14 +21,14 @@
             }
         }
         .gfield_label, label, .gform-field-label {
-            font-family: $OpenSans;
+            font-family: $OpenSans !important;
             font-size: 0.9rem;
             font-weight: 400 !important;
-            color: $white;
+            color: $white !important;
         }
 
         input[type="email"], input[type="tel"] {
-            font-family: $OpenSans;
+            font-family: $OpenSans !important;
         }
 
         input[type="text"] {
@@ -46,7 +46,7 @@
             }
         }
         textarea {
-            font-family: $OpenSans;
+            font-family: $OpenSans !important;
         }
 
 

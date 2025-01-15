@@ -145,6 +145,16 @@ $(document).ready(function () {
     cssEase: 'linear'
   });
 
+  // When the link or button is clicked
+  $('#scrollToApplyForm').on('click', function (e) {
+    e.preventDefault(); // Prevent default action (i.e., jumping to the link)
+
+    // Animate scrolling to the target form (#applyform)
+    $('html, body').animate({
+      scrollTop: $('#applyform').offset().top // Scroll to the top of #applyform
+    }, 1000); // Duration in milliseconds (1000ms = 1 second)
+  });
+
   if (jQuery(".gutenberg-styles > *").length && !(window.location.hash != "" && jQuery(window.location.hash).length)) {
     gutenbergScrollAnims = true;
     jQuery(".gutenberg-styles > *").each(function () {
