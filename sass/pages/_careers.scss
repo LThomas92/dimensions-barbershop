@@ -1,0 +1,187 @@
+.c-page-careers {
+    &__header {
+        width: 100vw;
+        height: 70vh;
+        position: relative;
+        left: calc((50% - 50vw));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-bottom: 5rem;
+        &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1; 
+        }
+    }
+    &__title {
+        color: $white;
+        font-size: 4rem;
+        z-index: 10;
+        position: absolute; /* Use absolute positioning to center */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjust position to truly center */
+        z-index: 2; /* Ensure title is above the overlay */
+        text-transform: uppercase;
+    }
+    &__cta {
+        position: relative;
+        top: 60%;
+        left: 47%;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+        text-transform: uppercase;
+        color: $white;
+        border: 0.5px solid $white;
+        padding: 0.8rem 1.5rem;
+    }
+    &__our-team {
+        @include container-margins;
+        margin-bottom: 10rem;
+        &__title {
+            font-size: 2rem;
+            font-weight: 300;
+            color: $red;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        &__desc {
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        &__testimonials {
+            .slick-dots {
+                display: flex !important;
+                justify-content: center;
+                margin: 0;
+                padding: 1rem 0;
+                list-style-type: none;
+                position: absolute;
+                bottom: -4.5rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .slick-active {
+                    button {
+                        background-color: $red;
+                    }
+                }
+                li {
+                    margin-right: 0.5rem;
+                    button {
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        padding: 0;
+                        border: none;
+                        border-radius: 100%;
+                        background-color: #070945;
+                        border: 1px solid #070945;
+                        text-indent: -9999px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        &__testimonial {
+            display: flex !important;
+            figure {
+                position: relative;
+                overflow: hidden;
+                flex-basis: calc((100% / 2));
+                &::before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 80%;
+                @media only screen and (max-width: $tablet_max) {
+                    padding-bottom: 100%;
+                }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                }
+            }
+            &__desc {
+                margin-bottom: 2rem;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 32px;
+            }
+        }
+        &__testimonial-desc-container {
+            flex-basis: calc((100% / 2));
+            background-color: $light-tan;
+            padding: 3rem 4rem;
+        }
+        &__testimonial-desc {
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url('../img/icons/quote.svg');
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+            }
+        }
+        &__testimonial-name {
+            font-weight: 300;
+            &::before {
+                content: '';
+                background-color: $red;
+                width: 30px;
+                height: 1.5px;
+                display: inline-block;
+                margin-right: 0.5rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    &__apply {
+        @include container-margins;
+        margin-bottom: 3.5rem;
+        .gform_title {
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: $blue;
+        }
+        .gfield_label, .gform-field-label, .gfield_description, .gform_fileupload_rules {
+            font-family: $robtoSlab !important;
+        }
+        input[type="file"] {
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            font-family: $robtoSlab !important;
+            background-color: $blue !important;
+            color: $white;
+            font-weight: 400 !important;
+            padding: 0.8rem 1.5rem !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+}
+
+#applyform {
+    margin-top: 150px; /* To place it further down the page */
+}

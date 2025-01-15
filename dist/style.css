@@ -271,7 +271,7 @@
       width: 30px;
       height: 30px;
       display: inline-block;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
       vertical-align: middle; }
   @media only screen and (max-width: 767px) {
     .site-footer__social-media {
@@ -847,6 +847,188 @@
         top: 25%;
         left: 50%; }
 
+.c-page-careers__header {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  left: calc((50% - 50vw));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 5rem; }
+  .c-page-careers__header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    z-index: 1; }
+
+.c-page-careers__title {
+  color: #fff;
+  font-size: 4rem;
+  z-index: 10;
+  position: absolute;
+  /* Use absolute positioning to center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Adjust position to truly center */
+  z-index: 2;
+  /* Ensure title is above the overlay */
+  text-transform: uppercase; }
+
+.c-page-careers__cta {
+  position: relative;
+  top: 60%;
+  left: 47%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0.5px solid #fff;
+  padding: 0.8rem 1.5rem; }
+
+.c-page-careers__our-team {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 10rem; }
+  @media (min-width: 1440px) {
+    .c-page-careers__our-team {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-page-careers__our-team {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-page-careers__our-team__title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #9B1C31;
+    text-align: center;
+    margin-bottom: 0.5rem; }
+  .c-page-careers__our-team__desc {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem; }
+  .c-page-careers__our-team__testimonials .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    position: absolute;
+    bottom: -4.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .c-page-careers__our-team__testimonials .slick-dots .slick-active button {
+      background-color: #9B1C31; }
+    .c-page-careers__our-team__testimonials .slick-dots li {
+      margin-right: 0.5rem; }
+      .c-page-careers__our-team__testimonials .slick-dots li button {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        padding: 0;
+        border: none;
+        border-radius: 100%;
+        background-color: #070945;
+        border: 1px solid #070945;
+        text-indent: -9999px;
+        cursor: pointer; }
+  .c-page-careers__our-team__testimonial {
+    display: flex !important; }
+    .c-page-careers__our-team__testimonial figure {
+      position: relative;
+      overflow: hidden;
+      flex-basis: calc((100% / 2)); }
+      .c-page-careers__our-team__testimonial figure::before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-bottom: 80%; }
+        @media only screen and (max-width: 1024px) {
+          .c-page-careers__our-team__testimonial figure::before {
+            padding-bottom: 100%; } }
+      .c-page-careers__our-team__testimonial figure img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover; }
+    .c-page-careers__our-team__testimonial__desc {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 32px; }
+  .c-page-careers__our-team__testimonial-desc-container {
+    flex-basis: calc((100% / 2));
+    background-color: #f4f2f0;
+    padding: 3rem 4rem; }
+  .c-page-careers__our-team__testimonial-desc {
+    position: relative; }
+    .c-page-careers__our-team__testimonial-desc::before {
+      content: '';
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI0IDMwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjOWIxYzMxOwogICAgICAgIHN0cm9rZS13aWR0aDogMHB4OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMS4zLDRjLjQsMCwuNy4zLjcuN3MtLjEuNS0uNS43Yy0xLjguOS0zLjksNC4yLTMuOSw2LjIsMywwLDQuMywyLjYsNC4zLDQuM3MtMS43LDQuMS00LjMsNC4xLTQuOC0yLjUtNC44LTUuM2MwLTYsNi44LTEwLjcsOC41LTEwLjdaTTEwLjUsNGMuNCwwLC43LjMuNy43cy0uMS41LS41LjdjLTEuOC45LTMuOSw0LjItMy45LDYuMiwzLDAsNC4zLDIuNiw0LjMsNC4zcy0xLjcsNC4xLTQuMyw0LjEtNC44LTIuNS00LjgtNS4zYzAtNiw2LjgtMTAuNyw4LjUtMTAuN1oiLz4KPC9zdmc+);
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block; }
+  .c-page-careers__our-team__testimonial-name {
+    font-weight: 300; }
+    .c-page-careers__our-team__testimonial-name::before {
+      content: '';
+      background-color: #9B1C31;
+      width: 30px;
+      height: 1.5px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle; }
+
+.c-page-careers__apply {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 3.5rem; }
+  @media (min-width: 1440px) {
+    .c-page-careers__apply {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-page-careers__apply {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-page-careers__apply .gform_title {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #112B5B; }
+  .c-page-careers__apply .gfield_label, .c-page-careers__apply .gform-field-label, .c-page-careers__apply .gfield_description, .c-page-careers__apply .gform_fileupload_rules {
+    font-family: "Roboto Slab", sans-serif !important; }
+  .c-page-careers__apply input[type="file"] {
+    cursor: pointer; }
+  .c-page-careers__apply input[type="submit"] {
+    font-family: "Roboto Slab", sans-serif !important;
+    background-color: #112B5B !important;
+    color: #fff;
+    font-weight: 400 !important;
+    padding: 0.8rem 1.5rem !important;
+    max-width: 100% !important;
+    width: 100% !important; }
+
+#applyform {
+  margin-top: 150px;
+  /* To place it further down the page */ }
+
 .c-page-privacy-policy {
   width: calc(100vw - calc(16px * 2));
   max-width: 959px;
@@ -895,12 +1077,17 @@
 body {
   position: relative;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 2000px;
+  /* To make the page scrollable */ }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 html,
 body {

@@ -46,7 +46,6 @@ $('.c-homepage_slides').slick({
 });
 
 
-
 $('.c-homepage__testimonials__slides').slick({
   dots: false,
   infinite: true,
@@ -56,6 +55,16 @@ $('.c-homepage__testimonials__slides').slick({
   cssEase: 'linear',
   prevArrow: $('.c-homepage__testimonials__slide__prev-arrow'),
   nextArrow: $('.c-homepage__testimonials__slide__next-arrow')
+});
+
+$('.c-page-careers__our-team__testimonials').slick({
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  slidesToShow: 1,
+  cssEase: 'linear',
 });
 
   

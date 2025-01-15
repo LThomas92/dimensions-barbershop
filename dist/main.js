@@ -135,6 +135,16 @@ $(document).ready(function () {
     nextArrow: $('.c-homepage__testimonials__slide__next-arrow')
   });
 
+  $('.c-page-careers__our-team__testimonials').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    slidesToShow: 1,
+    cssEase: 'linear'
+  });
+
   if (jQuery(".gutenberg-styles > *").length && !(window.location.hash != "" && jQuery(window.location.hash).length)) {
     gutenbergScrollAnims = true;
     jQuery(".gutenberg-styles > *").each(function () {

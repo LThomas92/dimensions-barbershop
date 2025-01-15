@@ -11,18 +11,24 @@
 @import "pages/services";
 @import "pages/lookbook";
 @import "pages/contact";
+@import "pages/careers";
 @import "pages/privacy-policy";
 
 body {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 2000px; /* To make the page scrollable */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
   
   html,
