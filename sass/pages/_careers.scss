@@ -19,27 +19,37 @@
         z-index: 1; 
         }
     }
-    &__title {
-        color: $white;
-        font-size: 4rem;
+    &__header-text-box {
         z-index: 10;
         position: absolute; /* Use absolute positioning to center */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); /* Adjust position to truly center */
         z-index: 2; /* Ensure title is above the overlay */
+        text-align: center;
+    }
+    &__title {
+        color: $white;
+        font-size: 4rem;
         text-transform: uppercase;
+        @media only screen and (max-width: $tablet_max) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $mobile_max) {
+            font-size: 2rem;
+        }
     }
     &__cta {
-        position: relative;
-        top: 60%;
-        left: 47%;
-        transform: translate(-50%, 50%);
         z-index: 2;
         text-transform: uppercase;
         color: $white;
         border: 0.5px solid $white;
+        display: inline-block;
         padding: 0.8rem 1.5rem;
+        margin-top: 1.5rem;
+        @media only screen and (max-width: $tablet_max) {
+            
+        }
     }
     &__our-team {
         @include container-margins;
@@ -91,6 +101,9 @@
         }
         &__testimonial {
             display: flex !important;
+            @media only screen and (max-width: $tablet_max) {
+                flex-direction: column;
+            }
             figure {
                 position: relative;
                 overflow: hidden;
@@ -158,6 +171,7 @@
     &__apply {
         @include container-margins;
         margin-bottom: 3.5rem;
+        padding: 0 1.5rem;
         .gform_title {
             font-weight: 300;
             text-align: center;

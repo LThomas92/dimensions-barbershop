@@ -260,6 +260,9 @@
     color: #d3d3d3;
     font-style: italic;
     font-weight: 400; }
+    @media only screen and (max-width: 1024px) {
+      .site-footer__desc {
+        text-align: center; } }
   .site-footer__address {
     color: #fff;
     position: relative; }
@@ -367,7 +370,8 @@
     flex-basis: calc((100% / 2) - 3rem);
     position: relative;
     margin-bottom: 1rem;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0px 0px 34px 1px rgba(0, 0, 0, 0.75); }
     .c-homepage__book-apt__image::before {
       content: "";
       position: relative;
@@ -390,7 +394,7 @@
         transform: scale(1.05); }
 
 .c-homepage__testimonials {
-  background-color: #F7F1E1; }
+  background-color: #f4f2f0; }
   .c-homepage__testimonials__title {
     color: #112B5B;
     text-align: center;
@@ -510,7 +514,8 @@
   .c-team-member__image {
     position: relative;
     margin-bottom: 1rem;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0px 0px 34px 1px rgba(0, 0, 0, 0.75); }
     .c-team-member__image::before {
       content: "";
       position: relative;
@@ -584,7 +589,8 @@
     .c-page-services__list-item figure {
       position: relative;
       margin-bottom: 1rem;
-      overflow: hidden; }
+      overflow: hidden;
+      box-shadow: 0px 0px 34px 1px rgba(0, 0, 0, 0.75); }
       .c-page-services__list-item figure::before {
         content: "";
         position: relative;
@@ -867,9 +873,7 @@
     /* Dark overlay */
     z-index: 1; }
 
-.c-page-careers__title {
-  color: #fff;
-  font-size: 4rem;
+.c-page-careers__header-text-box {
   z-index: 10;
   position: absolute;
   /* Use absolute positioning to center */
@@ -879,18 +883,27 @@
   /* Adjust position to truly center */
   z-index: 2;
   /* Ensure title is above the overlay */
+  text-align: center; }
+
+.c-page-careers__title {
+  color: #fff;
+  font-size: 4rem;
   text-transform: uppercase; }
+  @media only screen and (max-width: 1024px) {
+    .c-page-careers__title {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    .c-page-careers__title {
+      font-size: 2rem; } }
 
 .c-page-careers__cta {
-  position: relative;
-  top: 60%;
-  left: 47%;
-  transform: translate(-50%, 50%);
   z-index: 2;
   text-transform: uppercase;
   color: #fff;
   border: 0.5px solid #fff;
-  padding: 0.8rem 1.5rem; }
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1.5rem; }
 
 .c-page-careers__our-team {
   width: calc(100vw - calc(16px * 2));
@@ -941,6 +954,9 @@
         cursor: pointer; }
   .c-page-careers__our-team__testimonial {
     display: flex !important; }
+    @media only screen and (max-width: 1024px) {
+      .c-page-careers__our-team__testimonial {
+        flex-direction: column; } }
     .c-page-careers__our-team__testimonial figure {
       position: relative;
       overflow: hidden;
@@ -1000,7 +1016,8 @@
   max-width: 959px;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  padding: 0 1.5rem; }
   @media (min-width: 1440px) {
     .c-page-careers__apply {
       max-width: 1200px; } }

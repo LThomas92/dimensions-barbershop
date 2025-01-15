@@ -29,6 +29,9 @@
       color: $light-grey;
       font-style: italic;
       font-weight: 400;
+      @media only screen and (max-width: $tablet_max) {
+        text-align: center;
+    }
     }
 
     &__address {

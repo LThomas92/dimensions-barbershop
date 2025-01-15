@@ -11,8 +11,10 @@
     ?>
 
     <div style="background-image: url('<?php echo $careersHeader['url']; ?>');" class="c-page-careers__header">
-        <h1 class="c-page-careers__title"><?php echo $careersTitle; ?></h1>
-        <a href="#applyform" class="c-page-careers__cta"><?php echo $careersCTA; ?></a>
+        <div class="c-page-careers__header-text-box">
+            <h1 class="c-page-careers__title"><?php echo $careersTitle; ?></h1>
+            <a href="#applyform" class="c-page-careers__cta"><?php echo $careersCTA; ?></a>
+        </div>
     </div>
 
     <div class="c-page-careers__our-team">
