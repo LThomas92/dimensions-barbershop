@@ -100,6 +100,14 @@ $(document).ready(function () {
     });
   });
 
+  $('.search-btn').click(function () {
+    $(".overlay-menu").addClass("show-overlay-menu");
+  });
+
+  $(".close-icon").click(function () {
+    $(".overlay-menu").removeClass("show-overlay-menu");
+  });
+
   $('.menu-item-has-children').click(function () {
     $('.sub-menu').toggleClass('sub-menu__active');
     $(this).toggleClass('expanded');

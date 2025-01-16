@@ -17,8 +17,14 @@ $( document ).ready(function() {
         $(this).toggleClass('is-open').siblings().removeClass('is-open');
       }
     });
+  });
 
+  $('.search-btn').click(function() {
+    $(".overlay-menu").addClass("show-overlay-menu");
+  });
 
+  $(".close-icon").click(function () {
+    $(".overlay-menu").removeClass("show-overlay-menu");
   });
 
   $('.menu-item-has-children').click(function(){
