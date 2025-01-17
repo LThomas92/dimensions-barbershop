@@ -3,8 +3,11 @@
     &__logo {
         img {
             display: block;
-            height: 7rem;   
+            height: 8rem;   
         }
+    }
+    &__container {
+      padding: 1rem 0;
     }
     ul {
       display: flex;

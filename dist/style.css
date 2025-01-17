@@ -17,7 +17,9 @@
       width: calc(100vw - calc(16px * 2)); } }
   .site-header__logo img {
     display: block;
-    height: 7rem; }
+    height: 8rem; }
+  .site-header__container {
+    padding: 1rem 0; }
   .site-header ul {
     display: flex; }
     .site-header ul li {

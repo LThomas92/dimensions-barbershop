@@ -50,7 +50,7 @@
         $socialMediaLink = get_sub_field('social_media_link'); ?>
 
         <li class="site-footer__social-media-icon">
-          <a href="<?php echo $socialMediaLink; ?>" class="site-footer__social-media-link">
+          <a target="_blank" href="<?php echo $socialMediaLink; ?>" class="site-footer__social-media-link">
             <img src="<?php echo $socialMediaIcon['url']; ?>" alt="<?php echo $socialMediaIcon['alt']; ?>">
           </a>
         </li>
