@@ -78,7 +78,7 @@
 	<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-white.svg" alt="Close Icon"/>
 
 
-	<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+	<img class="search-btn" title ="Search Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/search-white.svg" alt="Search Icon">
 	</div>
   <nav class="mobile-navigation">
 			<?php
