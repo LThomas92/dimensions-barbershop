@@ -82,6 +82,9 @@
       text-align: center;
       p {
         color: $white;
+        @media only screen and (max-width: $mobile_max) {
+          font-size: 0.8rem;
+        }
       }
     }
     &__copyright-margins {

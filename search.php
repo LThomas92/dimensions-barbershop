@@ -47,10 +47,24 @@ get_header();
 			</ul>
 
 
-		<?php else :
-        get_template_part( 'template-parts/content', 'none' );
+		<?php else : ?>
+        
+		<div class="c-page-search__no-results-found">
+			<h3 class="c-page-search__no-results-title">Nothing Found, Sorry, but nothing matched your search terms. Please try again with some different keywords.</h3>
+			<div class="c-page-search__no-results-search">
+				<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label>
+				<span class="c-page-search__no-results-keyword">Search Keywords:
+				<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Try Search Again', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+				</span>	
+				</label>
+				<button type="submit" name="submit" value="submit">Search</button>
+				</form>
+			</div>
+		</div>
 
-		endif;
+
+		<?php  endif;
 		?>
 
 	</main><!-- #main -->

@@ -34,4 +34,34 @@
         padding-top: 1rem;
         color: $dark-grey;
     }
+    &__no-results-title {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+    &__no-results-keyword {
+        font-size: 1.2rem;
+        font-family: $OpenSans;
+        font-weight: 300;
+        display: flex;
+        margin-top: 5rem;
+        margin-bottom: 1.5rem;
+        .search-field {
+            border-bottom: 1px solid $blue;
+            width: 50%;
+            margin-left: 1.2rem;
+        }
+    }
+    &__no-results-search {
+        button {
+            display: inline-block;
+            background-color: $blue;
+            color: $white;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
 }
