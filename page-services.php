@@ -15,15 +15,12 @@
 
         <?php $serviceImg = get_sub_field('service_image'); 
               $serviceTitle = get_sub_field('service_title');
-              $serviceCTA = get_sub_field('service_cta');
         ?>
         <li class="c-page-services__list-item">
-            <a href="<?php echo $serviceCTA['url']; ?>">
             <figure class="c-page-services__list-item-image">
                 <img src="<?php echo $serviceImg['url']; ?>" alt="<?php echo $serviceImg['alt']; ?>">
             </figure>
             <h4 class="c-page-services__list-item-title"><?php echo $serviceTitle; ?></h4>
-            </a>
         </li>
 
 <?php endwhile; ?>
