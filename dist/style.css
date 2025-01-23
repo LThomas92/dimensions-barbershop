@@ -1219,6 +1219,43 @@
       .c-page-privacy-policy__content {
         margin-top: 4rem; } }
 
+.error-404 {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .error-404 {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .error-404 {
+      width: calc(100vw - calc(16px * 2)); } }
+  .error-404 .page-content {
+    display: flex; }
+    @media only screen and (max-width: 1024px) {
+      .error-404 .page-content {
+        flex-direction: column; } }
+  .error-404__content {
+    flex-basis: calc((100% / 2) - 2rem);
+    margin-top: 2.5rem; }
+    @media only screen and (max-width: 1024px) {
+      .error-404__content {
+        margin-bottom: 2.5rem; } }
+  .error-404__image {
+    flex-basis: calc((100% / 2) - 1rem); }
+    .error-404__image img {
+      height: 30rem; }
+  .error-404__title {
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #112B5B; }
+  .error-404__cta {
+    background-color: #112B5B;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    display: inline-block;
+    margin-top: 2.5rem; }
+
 body {
   position: relative;
   display: flex;

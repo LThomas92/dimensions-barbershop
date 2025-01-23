@@ -11,50 +11,32 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="content">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dimensions-barbershop' ); ?></h1>
-			</header><!-- .page-header -->
+		<section class="error-404">
+			<?php  
+				$title = get_field('404_title', 'option');
+				$desc = get_field('404_description', 'option');
+				$cta = get_field('404_cta', 'option');
+				$image = get_field('404_image', 'option');
+			?>
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'dimensions-barbershop' ); ?></p>
 
-					<?php
-					get_search_form();
+			<div class="error-404__content">
+				<h1 class="error-404__title"><?php echo $title; ?></h1>
+				<p class="error-404__desc"><?php echo $desc; ?></p>
+				<a class="error-404__cta" href="<?php echo $cta['url']; ?>"><?php echo $cta['title']; ?></a>
+			</div>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'dimensions-barbershop' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$dimensions_barbershop_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'dimensions-barbershop' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$dimensions_barbershop_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
+			<div class="error-404__image">
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+			</div>
+				
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
+		</div>	
 	</main><!-- #main -->
 
-<?php
-get_footer();
+<?php get_footer();
