@@ -1,5 +1,5 @@
 .site-footer {
-    background-color: $blue;
+    background-color: $white;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     &__container {
@@ -26,7 +26,7 @@
       display: block;
       margin-top: 1.5rem;
       margin-bottom: 2.5rem;
-      color: $light-grey;
+      color: $blue;
       font-style: italic;
       font-weight: 400;
       @media only screen and (max-width: $tablet_max) {
@@ -35,7 +35,7 @@
     }
 
     &__address {
-      color: $white;
+      color: $blue;
       position: relative;
       &::before {
         content: '';
@@ -66,7 +66,7 @@
       flex-basis: calc((100% / 3) - 2rem);
       ul li {
         a {
-          color: $white;
+          color: $blue;
           display: block;
           margin-bottom: 0.8rem;
           transition: all 300ms ease-in;
